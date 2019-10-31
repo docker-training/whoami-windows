@@ -1,6 +1,5 @@
-FROM microsoft/aspnetcore-build:2.0.0-nanoserver
+FROM mcr.microsoft.com/dotnet/core/sdk:2.1
 ENV ASPNETCORE_URLS http://+:5000
-RUN mkdir /app
 WORKDIR /app
 COPY app.csproj ./
 RUN dotnet restore
